@@ -20,3 +20,40 @@ console.log(`
 3. Add classes to all elements of your card
 - Add styling to the CSS file
 `);
+
+console.clear();
+
+const random = n => Math.floor(Math.random() * n);
+const randomItem = array => array[random(array.length)];
+
+const firstNames = ["Max", "Alex", "Kim", "", "Cameron"];
+const lastNames = ["Hall", "Lopez", "Burke", "Murphy", "Byrd"];
+const sex = ["men", "women"];
+const hobbies = ["swimming", "boat driving", "riding", "drinking", "shuffling"];
+
+
+const root = document.querySelector("#root");
+
+const cards = Array.from({ length: 4 });
+const persons = cards.map( card => { // ist das schlimm wenn was drin ist
+  const personName = randomItem(firstNames) + " " + randomItem(lastNames);
+  return {
+    name: personName,
+    image: `https://randomuser.me/api/portraits/${randomItem(sex)}/${random(50)}.jpg`,
+  };
+});
+
+root.innerHTML += /*html*/ `
+    <div class="grid">${persons.map(person => (
+            `<div class="card">
+                <header class="card-header">
+                    <h3>${person.name}</h3>
+                </header
+                <figure class="card-image">
+                    <img src="${person.image}" alt="Image of ${person.name}"
+                </figure>
+            </div>`
+            )
+        ).join("")
+    }</div >`;
+

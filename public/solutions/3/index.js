@@ -21,6 +21,8 @@ console.log(`
 - Add styling to the CSS file
 `);
 
+console.clear();
+
 /**
  * Return a random number from 0 to `n`
  * @param {number} n

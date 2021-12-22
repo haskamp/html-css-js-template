@@ -51,7 +51,7 @@ const lastNames = ["Hall", "Lopez", "Burke", "Murphy", "Byrd"];
 const sex = ["men", "women"];
 
 // 1. + 3. Add the card with random people
-document.querySelector("#root").innerHTML += `
+document.querySelector("#root").innerHTML += /*html*/`
 <div class="Card">
     <header class="Card-header">
         <h3>${randomItem(firstNames)} ${randomItem(lastNames)}</h3>

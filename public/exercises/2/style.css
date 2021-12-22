@@ -1,0 +1,38 @@
+:root {
+    --color-background: whitesmoke;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --color-background: grey;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Roboto Mono', monospace;
+ 
+}
+
+.card {
+    width: 50vw;
+    border-radius: 20px;
+    padding: 5px;
+    
+    background-color: var(--color-background);
+}
+
+.cardcontent-headline {
+    margin-bottom: 0px;
+}
+
+.card-content {
+
+}
+
+

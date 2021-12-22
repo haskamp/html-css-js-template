@@ -1,0 +1,21 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0px;
+
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+   
+
+}
+
+.card {
+    border: solid 2px black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px gray
+
+}
