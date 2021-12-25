@@ -1,0 +1,42 @@
+
+#root {
+    display: grid;
+    position: relative;
+    grid-template-columns: 90vw;
+    gap: 10px;
+}
+
+header {
+    background: whitesmoke;
+    box-shadow: 2px 2px 5px gray;
+}
+
+main {
+    height: 100vh;
+    background: whitesmoke;
+    box-shadow: 2px 2px 5px gray;
+}
+
+aside {
+    position: absolute;
+    z-index: 1;
+    right: 90vw;
+    height: 100vh;
+    transition: right 10s;
+    background: whitesmoke;
+    box-shadow: 2px 2px 5px gray;
+}
+
+button {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    : right;
+    padding:0;
+    border-radius: 0;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.sidebar--open {
+    right: unset;
+}

@@ -44,3 +44,31 @@ Run the tests via 'npm run cypress:open'
 All tests should pass
 
 `);
+
+const root = document.querySelector("#root");
+
+const header = document.createElement("header");
+const button = document.createElement("button");
+const sidebar = document.createElement("aside");
+const main = document.createElement("main");
+const headline = document.createElement("h1");
+
+root.append(header, sidebar, main);
+header.append(button);
+main.append(headline);
+
+headline.innerText = "Hello User";
+button.innerHTML = `<svg viewBox="0 0 24 24"><path d="M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z"/></svg>`
+
+sidebar.innerHTML += `
+<nav>
+   <a href="http://">Link</a>
+   <a href="http://">Link</a>
+   <a href="http://">Link</a>
+   <a href="http://">Link</a>
+</nav>
+`
+
+button.addEventListener("click", event_ => {
+    sidebar.classList.toggle("sidebar--open");
+})

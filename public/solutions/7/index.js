@@ -26,6 +26,8 @@ async function getData(url) {
   } catch (error_) {
     console.error(error_);
     return [];
+  } finally {
+    console.log("done!");
   }
 }
 

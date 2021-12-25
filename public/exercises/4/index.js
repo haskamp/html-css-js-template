@@ -22,19 +22,27 @@ console.clear();
 
 const root = document.querySelector("#root");
 
-root.innerHTML += /*html*/ `   
-<form>
-    <label>Suscribe for the newsletter!</label>
-    <input class="input" type="email"/>
-    <button type="submit">Suscribe</button>
-</form>
-`;
+const form = document.createElement("form");
 
-function save(email) {
-    localStorage.setItem("Emailadress", email)
+root.append(form);
+
+form.innerHTML += `
+<input type="email" name="email"/>
+<button type="submit">Subscribe</button>`;
+
+form.addEventListener("submit", ev =>{
+    ev.preventDefault();
+
+    const formData = new FormData(form);
+
+    console.log(formData.get("email"))
+
+    window.localStorage.setItem("email-address", formData.get("email"));
+
+    form.innerHTML = "thanks";
+
+})
+if (window.localStorage.getItem("email-address")) {
+    form.remove()
+    root.append("You are subscribed")
 }
-
-
-const inputEmail = document.querySelector(".input");
-inputEmail.addEventListener("input", save) 
-console.log(inputEmail);
