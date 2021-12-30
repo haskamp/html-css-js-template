@@ -41,5 +41,8 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
+  },
+  "dependencies": {
+    "@mdi/js": "^6.5.95"
   }
 }
